@@ -81,8 +81,11 @@ document.addEventListener("click", function (event) {
   }
 })(window);
 
-//change background color when click on the color select
+//changes click on
 dropdown.addEventListener("click", function (event) {
-  console.log(event.target);
+  //log mouse event
+  // console.log(event.target);
+  console.log(event);
   document.body.style.backgroundColor = event.target.id;
+  document.querySelector("h1").innerHTML = event.target.id;
 });
