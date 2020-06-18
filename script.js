@@ -4,7 +4,13 @@ var menu = document.querySelector(".menu"),
   button = document.querySelector(".nav-toggle"),
   dropdown = document.querySelector(".dropdown");
 
-button.onclick = function () {
+//click hamburger open and close dropdown nav
+// button.onclick = function () {
+//   classie.toggle(menu, "menu-active");
+// };
+
+// Hamburger hover open and close dropdown nav
+button.onmouseenter = function () {
   classie.toggle(menu, "menu-active");
 };
 
@@ -84,8 +90,32 @@ document.addEventListener("click", function (event) {
 //changes click on
 dropdown.addEventListener("click", function (event) {
   //log mouse event
-  // console.log(event.target);
-  console.log(event);
+  // console.log("event target", event.target);
+  // console.log("event target id", event.target.id);
+  // console.log(event);
   document.body.style.backgroundColor = event.target.id;
   document.querySelector("h1").innerHTML = event.target.id;
 });
+
+//key press change color
+document.onkeypress = (event) => {
+  if (parseInt(event.key) === 1) {
+    document.body.style.backgroundColor = "red";
+    document.querySelector("h1").innerHTML = "red";
+  }
+  if (parseInt(event.key) === 2) {
+    document.body.style.backgroundColor = "orange";
+    document.querySelector("h1").innerHTML = "orange";
+  }
+  if (parseInt(event.key) === 3) {
+    document.body.style.backgroundColor = "purple";
+    document.querySelector("h1").innerHTML = "purple";
+  }
+  if (parseInt(event.key) === 4) {
+    document.body.style.backgroundColor = "green";
+    document.querySelector("h1").innerHTML = "green";
+  }
+
+  // console.log("key pressed", typeof event.key);
+  // console.log("event", event);
+};

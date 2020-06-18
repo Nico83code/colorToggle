@@ -4,9 +4,14 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+h1 {
+  width: 800;
+  margin: 0;
+  text-align: center;
+}
+
 .dropdown {
   padding: 1em 1em 0 1em;
-
   display: block;
   color: #222;
 }
@@ -25,7 +30,6 @@ body {
 
 .nav-toggle:focus,
 .menu a:focus {
-  /* outline: 1px solid red; */
   background-color: rgb(152, 152, 152);
 }
 
@@ -53,6 +57,9 @@ body {
 }
 .active {
   background-color: rgb(254, 2, 2);
+}
+#home:hover {
+  color: rgb(255, 255, 255);
 }
 
 #red:hover {
